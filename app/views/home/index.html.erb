@@ -1,0 +1,28 @@
+<h1>Welcome to Our Wedding</h1>
+<p>Explore the sections below:</p>
+
+<% if flash[:notice] %>
+  <div class="notice-banner">
+    <p><%= flash[:notice] %></p>
+  </div>
+<% elsif flash[:alert] %>
+  <div class="alert-banner">
+    <p><%= flash[:alert] %></p>
+  </div>
+<% end %>
+
+<ul>
+  <li><a href="<%= root_path %>">Home</a></li>
+  <li><%= link_to 'Us Through Time in Pictures', us_through_time_in_pictures_path %></li>
+  <li><%= link_to 'Our Story', our_story_path %></li>
+  <li><%= link_to 'Events', events_path %></li>
+  <li><%= link_to 'Accommodations', accommodations_path %></li>
+  <li><%= link_to 'Attractions', attractions_path %></li>
+  <li><%= link_to 'Hairdressers & MUA', hairdressers_path %></li>
+  <li><%= link_to 'Restaurant', restaurant_path %></li>
+  <li><%= link_to 'RSVP', rsvp_path %></li>
+  <li><%= link_to 'Registry', registry_path %></li>
+
+  <li><a href="<%= guests_path %>">View Guest List</a></li> <!-- Esta solo se puede ver si eres admin -->
+  <!-- Add more sections as needed -->
+</ul>

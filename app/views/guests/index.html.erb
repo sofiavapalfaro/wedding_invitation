@@ -1,0 +1,35 @@
+<h1>Guest List</h1>
+
+<%= link_to 'Add Guest', new_guest_path, class: 'btn btn-primary mb-3' %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Invitation URL</th>
+      <th>RSVP Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @guests.each do |guest| %>
+      <tr>
+        <td><%= guest.name %></td>
+        <td><%= guest.email %></td>
+        <td><%= invite_url(token: guest.token) %></td>
+        <td>
+          <% if guest.rsvp? %>
+            <span class="badge bg-success">RSVP'd</span>
+          <% else %>
+            <span class="badge bg-warning">Not RSVPed</span>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to 'Edit', edit_guest_path(guest), class: 'btn btn-secondary btn-sm' %>
+          <%= link_to 'Delete', guest_path(guest), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm ml-2' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

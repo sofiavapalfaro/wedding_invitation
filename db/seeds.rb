@@ -10,3 +10,10 @@
 
 Guest.create(name: "John Doe", email: "john@example.com")
 Guest.create(name: "Jane Smith", email: "jane@example.com")
+Guest.create(name: "Gideon Grey", email: "gideon@example.com")
+Guest.create(name: "Paula Jones", email: "paula@example.com")
+
+
+Admin.create(email: "bride@example.com", password: "password", role: "bride")
+Admin.create(email: "groom@example.com", password: "password", role: "groom")
+Admin.create(email: "planner@example.com", password: "password", role: "planner")
