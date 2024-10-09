@@ -63,7 +63,7 @@ class GuestsController < ApplicationController
 
   def destroy
     @guest.destroy
-    redirect_to guests_path
+    redirect_to guests_path, status: :see_other
   end
 
   private
