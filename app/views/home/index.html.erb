@@ -1,6 +1,13 @@
 <h1>Welcome to Our Wedding</h1>
 <p>Explore the sections below:</p>
 
+<% if admin_signed_in? %>
+  <p>
+    <%= link_to "View Profile", profile_path, class: "btn btn-primary" %>
+  </p>
+<% else %>
+  <p>Please <%= link_to "Sign in", new_admin_session_path %> to access your profile.</p>
+<% end %>
 <% if flash[:notice] %>
   <div class="notice-banner">
     <p><%= flash[:notice] %></p>

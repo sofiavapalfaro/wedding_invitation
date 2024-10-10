@@ -14,6 +14,7 @@ Guest.create(name: "Gideon Grey", email: "gideon@example.com")
 Guest.create(name: "Paula Jones", email: "paula@example.com")
 
 
-Admin.create(email: "bride@example.com", password: "password", role: "bride")
-Admin.create(email: "groom@example.com", password: "password", role: "groom")
-Admin.create(email: "planner@example.com", password: "password", role: "planner")
+Admin.create(email: "bride@example.com", password: "password", role: "bride", name: "Bride Name")
+Admin.create(email: "groom@example.com", password: "password", role: "groom", name: "Groom Name")
+Admin.create(email: "planner@example.com", password: "password", role: "planner", name: "Wedding Planner")
+

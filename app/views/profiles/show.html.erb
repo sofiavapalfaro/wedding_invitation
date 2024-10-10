@@ -1,0 +1,11 @@
+<h1>Admin Profile</h1>
+
+<p><strong>Name:</strong> <%= @admin.name %></p>
+<p><strong>Email:</strong> <%= @admin.email %></p>
+<p><strong>Role:</strong> <%= @admin.role %></p>
+
+<%= link_to 'Edit Profile', edit_profile_path %>
+
+<!-- Add more fields if needed -->
+
+<p><%= link_to 'Back Home', root_path %></P>

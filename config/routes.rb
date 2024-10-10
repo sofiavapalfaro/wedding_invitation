@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  get 'profile/show'
   # Devise routes for admin authentication
   devise_for :admins
-
+  # Profile route for admins
+  # Profile routes for admins (edit and update)
+  resource :profile, only: [:show, :edit, :update], controller: 'profiles'
   # Set the root path to the HomeController's index action
   root "home#index"
 
